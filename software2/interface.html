@@ -1,0 +1,176 @@
+<html>
+<style>
+body {
+	margin: 0;
+	background: #171618;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+a {
+	position: relative;
+	padding: 30px 60px;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+	color: #999;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font: 700 30px consolas;
+	overflow: hidden;
+}
+
+a span:nth-child(1) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to right, #171618, #3bff3b);
+	animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+a span:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to bottom, #171618, #3bff3b);
+	animation: animate2 2s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate2 {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+a span:nth-child(3) {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to left, #171618, #3bff3b);
+	animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+a span:nth-child(4) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to top, #171618, #3bff3b);
+	animation: animate4 2s linear infinite;
+	animation-delay: 1s;
+}
+
+@keyframes animate4 {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+.avatar{  overflow:hidden;   }
+
+.user-icon{
+  font-size:2em;  /* change font size should change size of icon */
+  float:left; margin:1em;  /* remove this line to avoid float/margin */
+}
+.user-icon{
+  border-radius:4em; border:1px solid skyblue;
+  height:6em; width:6em;  
+  background:none;padding:0.1em;  
+}
+
+.user-icon::before{
+  content:" "; display:block;
+  height:2em; width:2em;
+  background:skyblue;
+  position:relative; left:2em;top:0.8em;
+  border-radius:2em;
+}
+.user-icon::after{
+  content:" "; display:block;
+  height:2em;width:4em;
+  background:skyblue;
+  position:relative; left:1em;top:1em;
+  border-radius:2em 2em 0 0;
+}
+
+.red, .amber, .green{
+  display:block;
+  height:0em;width:0em;
+  background:none;
+  position:relative; left:3em;top:-2em;
+ }
+
+
+.red::after,.amber::after,.green::after{
+  content:" "; display:block;
+  height:1em;width:1em;
+  position:relative; left:1.4em;top:0em;
+  }
+
+.amber::after {
+  height:0;width:0;
+  border:.58em solid transparent;  
+  /* for eq Triangle  ratio is 1:1.16. 1.16/2=~.58 */
+  border-bottom:1em solid orange;
+  border-top:0em; /* important for positioning */  
+ }
+
+
+.red::after{background:red;}
+
+.green::after{background:green;border-radius:1em;}
+
+.font18{font-size:18px}
+</style>
+<div class="avatar" style="margin-left:20px"><div class="user-icon">
+    <span class="green"></span>
+  </div>
+</div>
+<a href="logolog.html" target="_blank">
+        
+
+	<span> </span>
+	<span> </span>
+	<span> </span>
+	<span> </span>
+	USER LOGIN
+</a>
+
+<a href="adminlogin.html" target="_blank">
+	<span> </span>
+	<span> </span>
+	<span> </span>
+	<span> </span>
+	ADMIN LOGIN
+</a>
+</html>
